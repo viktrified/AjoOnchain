@@ -7,7 +7,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
+import { sepolia } from "wagmi/chains";
 
 // Create a QueryClient
 const queryClient = new QueryClient();
@@ -16,7 +16,7 @@ const queryClient = new QueryClient();
 const config = getDefaultConfig({
   appName: "My DApp",
   projectId: "YOUR_WALLET_CONNECT_PROJECT_ID", // Replace with your WalletConnect project ID
-  chains: [mainnet, polygon, optimism, arbitrum],
+  chains: [sepolia],
   ssr: true,
 });
 
